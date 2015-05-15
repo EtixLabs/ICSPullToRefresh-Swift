@@ -157,7 +157,7 @@ public class InfiniteScrollingView: UIView {
             }
             if !scrollView!.dragging && state == .Triggered {
                 state = .Loading
-            } else if contentOffset!.y > scrollOffsetThreshold && state == .Stopped && scrollView!.dragging {
+            } else if contentOffset!.y > 0 && contentOffset!.y > scrollOffsetThreshold && state == .Stopped && scrollView!.dragging {
                 state = .Triggered
             } else if contentOffset!.y < scrollOffsetThreshold && state != .Stopped {
                 state == .Stopped
